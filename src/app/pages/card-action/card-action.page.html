@@ -1,0 +1,20 @@
+@if (breed) {
+<ion-card class="breed-card" (click)="goToBreedDetail(breed.id)" button>
+  <div class="image-container">
+    <ion-img [src]="image?.url || 'assets/no-image.png'" alt="{{ breed.name }}"></ion-img>
+    <div class="overlay"></div>
+    <div class="text-overlay">
+      <h2 class="name">{{ breed.name }} </h2> <ion-label class="label">Origen: {{ breed.origin }}</ion-label>
+    </div>
+  </div>
+
+  <ion-card-content>
+    <ion-chip color="warning" outline>
+      <ion-label>Inteligencia: {{ breed.intelligence }} / 5</ion-label>
+    </ion-chip>
+        <ion-chip color="warning" outline>
+      <ion-label>Nivel de Energia: {{ breed.energy_level }} / 5</ion-label>
+    </ion-chip>
+  </ion-card-content>
+</ion-card>
+}

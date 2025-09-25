@@ -1,0 +1,105 @@
+@if (breed) {
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{ breed.name }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="detail-content">
+  <div class="fixed-image">
+    <div class="image-wrapper">
+      <ion-img [src]="image?.url" alt="{{ breed.name }}"></ion-img>
+    </div>
+  </div>
+
+  <div class="info-section">
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>{{ breed.name }}</ion-card-title>
+      </ion-card-header>
+
+      <ion-card-content>
+        <ion-label class="label">Origen: {{ breed.origin }}</ion-label>
+
+        <h3>Descripción</h3>
+        <p>{{ breed.description }}</p>
+      </ion-card-content>
+    </ion-card>
+  </div>
+
+  <div class="info-section">
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Caracteristicas</ion-card-title>
+      </ion-card-header>
+
+      <ion-card-content>
+        <section>
+          <div class="chips">
+            <ion-chip color="warning" outline>
+              <ion-label>Inteligencia: {{ breed.intelligence }} / 5</ion-label>
+            </ion-chip>
+
+            <ion-chip color="primary" outline>
+              <ion-label>Energía: {{ breed.energy_level }} / 5</ion-label>
+            </ion-chip>
+
+            <ion-chip color="success" outline>
+              <ion-label>Niños: {{ breed.child_friendly }} / 5</ion-label>
+            </ion-chip>
+
+            <ion-chip color="tertiary" outline>
+              <ion-label>Vida: {{ breed.life_span }} años</ion-label>
+            </ion-chip>
+
+            <ion-chip color="medium" outline>
+              <ion-label>Afecto: {{ breed.affection_level }} / 5</ion-label>
+            </ion-chip>
+
+            <ion-chip color="secondary" outline>
+              <ion-label>Adaptabilidad: {{ breed.adaptability }} / 5</ion-label>
+            </ion-chip>
+
+            <ion-chip color="dark" outline>
+              <ion-label>Amigable con perros: {{ breed.dog_friendly }} / 5</ion-label>
+            </ion-chip>
+
+            <ion-chip color="success" outline>
+              <ion-label>Social: {{ breed.social_needs }} / 5</ion-label>
+            </ion-chip>
+
+            <ion-chip color="danger" outline>
+              <ion-label>Salud: {{ breed.health_issues }} / 5</ion-label>
+            </ion-chip>
+
+            <ion-chip color="primary" outline>
+              <ion-label>Amigable con extraños: {{ breed.stranger_friendly }} / 5</ion-label>
+            </ion-chip>
+
+            <ion-chip color="warning" outline>
+              <ion-label>Vocalización: {{ breed.vocalisation }} / 5</ion-label>
+            </ion-chip>
+
+            <ion-chip color="medium" outline>
+              <ion-label>Shedding: {{ breed.shedding_level }} / 5</ion-label>
+            </ion-chip>
+
+            <ion-chip color="dark" outline>
+              <ion-label>Grooming: {{ breed.grooming }} / 5</ion-label>
+            </ion-chip>
+
+            <ion-chip color="tertiary" outline>
+              <ion-label>Peso: {{ breed.weight.metric }} kg</ion-label>
+            </ion-chip>
+          </div>
+
+        </section>
+      </ion-card-content>
+    </ion-card>
+  </div>
+
+</ion-content>
+}

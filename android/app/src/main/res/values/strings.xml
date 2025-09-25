@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">MeowPedia</string>
+    <string name="title_activity_main">MeowPedia</string>
+    <string name="package_name">com.zaletdev.meowpedia</string>
+    <string name="custom_url_scheme">com.zaletdev.meowpedia</string>
+</resources>

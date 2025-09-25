@@ -1,0 +1,21 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>MeowPedia</ion-title>
+  </ion-toolbar>
+  <ion-toolbar>
+    <ion-searchbar [(ngModel)]="query" [debounce]="0" (ionInput)="onSearchChange($event)"
+      placeholder="Buscar razas de gatos"></ion-searchbar>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-refresher slot="fixed" (ionRefresh)="refresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+
+  <ion-list>
+    @for (item of breeds; track item.id) {
+    <app-card-action [breed]="item" [image]="images[item.id]"></app-card-action>
+    }
+  </ion-list>
+</ion-content>
