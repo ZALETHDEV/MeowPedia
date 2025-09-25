@@ -17,7 +17,7 @@ Su objetivo es brindar a los amantes de los felinos una experiencia sencilla y a
 
 ### 1. Clonar el repositorio
 ```bash
-git clone https://github.com/tu-usuario/meowpedia.git
+git clone https://github.com/ZALETHDEV/MeowPedia
 cd meowpedia
 ```
 
